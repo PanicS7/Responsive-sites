@@ -1,0 +1,116 @@
+<!doctype html><html><head>
+		<title>Hotel Booking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<style type="text/css" id="dcoder_stylesheet">body {
+	background-image: linear-gradient(#fff, #4ea1e2);
+    height: 100vh;
+    font-size: 15px;
+}
+#personalDetails, #bookingDetails {
+	width: 300px;
+	margin: auto;
+	background-image: linear-gradient(#f5f5dc,#fff);
+}
+div {
+	text-align: right;
+}
+input {
+	width: 150px;
+	margin: 3px;
+	padding-left: 1px;
+}
+#dateInput {
+	width: 152px;
+}
+#meal p, #balcony p {
+	text-align: left;
+}
+#meal .group {
+	display: flex;
+	justify-content: left;
+}
+.group label {
+	width: 10px;
+	padding-left: 20px;
+}
+.radioInput input{
+	align-content: flex-start;
+}
+#balcony #check {
+	text-align: left;
+}
+#balcony {
+	display: inline;
+}
+#balcony input {
+	margin-left: -45px;
+}
+#submit {
+	text-align: center;
+	margin-top: 10px;
+}
+#submit button {
+	background-color: #1DA1F2;
+	border: 0;
+	border-radius: 5%;
+	padding: 7px;
+	color: #ffd;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+</style></head>
+	<body>
+		<form>
+			<fieldset id="personalDetails">
+				<legend>Personal Details</legend>
+				<div id="name">
+					<label>Name:</label>
+					<input type="text" placeholder="John" required>
+				</div>
+				<div id="email">
+					<label>Email:</label>
+					<input type="email" placeholder="john@gmail.com" required>
+				</div>
+				<div id="tel">
+					<label>Telephone:</label>
+					<input type="number" placeholder="+381 060-000-00-00" required>
+				</div>
+			</fieldset>
+			<fieldset id="bookingDetails">
+				<legend>Booking Details</legend>
+				<div id="date">
+					<label>Booking date:</label>
+					<input type="date" id="dateInput" placeholder="1/1/2019" min="2020-08-23" required>
+				</div>
+				<div id="guest">
+					<label>Number of guest:</label>
+					<input type="number" placeholder="4" min="1" max="4" required>
+				</div>
+				<div id="meal">
+					<p>Do you require meal?</p>
+					<div class="group">
+						<label>Yes</label>
+						<div class="radioInput">
+							<input type="radio" name="meal" value="yes">
+						</div>
+					</div>
+					<div class="group">
+						<label>No</label>
+						<div class="radioInput">
+							<input type="radio" name="meal" value="no">
+						</div>
+					</div>
+				</div>
+				<div id="balcony">
+					<p>Do you require balcony?</p>
+					<label>Yes</label>
+					<input type="checkbox" value="require">
+				</div>
+				<div id="submit">
+					<button type="submit">Submit</button>
+				</div>
+			</fieldset>
+		</form>
+</body></html>
