@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Product Landing Page #1</title>
+  
+  
+  
+  
+<style>
+/*** MOBILE FIRST ***/
+
+/* Restart */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Button to top of the page */
+#top {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: aqua;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+}
+#top a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+/** Header - Contact info **/
+header .contact-info-container, #social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact-info {
+  border-bottom: 1px solid lightgray;
+}
+.contact-info-container i {
+  color: orangered;
+}
+header i {
+  display:flex;
+  margin: 10px;
+}
+/* Social media icons */
+#social i {
+  font-size: 25px;
+}
+#social i:hover {
+  transform:scale(1.3);
+  cursor: pointer;
+}
+.fa-facebook-square {
+  color: #4267B2;
+}
+.fa-twitter-square {
+  color: #00acee;
+}
+.fa-instagram {
+  color: #8a3ab9;
+}
+.fa-pinterest-square {
+  color:#c8232c;
+}
+
+/* Logo and Navigation */
+#logoAndNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+#logo:hover {
+  cursor: pointer;
+}
+#navMenu {
+  font-size: 30px;
+  padding-right:10px;
+}
+#navMenu:hover {
+  cursor:pointer;
+}
+nav {
+ position:fixed;
+ width: 100%;
+ top:0;
+ background-color: #38B0DE;
+ text-align: center;
+ margin-left: -10px;
+}
+nav ul {
+  display: none;
+  list-style-type: none;
+}
+nav ul li {
+  width: 100px;
+  margin: auto;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+}
+/* Add .show to display navigation */
+.show {
+  display: block;
+  padding-bottom: 5px;
+}
+.show li:hover {
+  cursor:pointer;
+  transform: scale(1.3);
+}
+
+/** Main **/
+#container {
+  width: 100%;
+}
+main {
+  margin: 20px 10px 0;
+}
+main h1,h2 {
+  margin: 20px 10px;
+}
+/* About section - text and image */
+#about {
+  background-color: #00002c;
+  color: #eee;
+  padding: 10px;
+  margin-top: -5px;
+}
+#about img {
+  width: 280px;
+  height: 280px;
+}
+#about p {
+  margin-bottom: 10px;
+}
+#about i {
+  margin-right: 10px;
+  color: orangered;
+}
+/* Video */
+#video {
+  width: 100%;
+  height: 200px;
+}
+/* Contact form */
+#form-container {
+  background-color: darkgray;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#form-container input {
+  margin-bottom: 10px;
+  padding: 7px;
+  box-sizing: border-box;
+}
+form input,textarea {
+    width: 250px;
+  }
+#form-container #submit {
+  background-color: #222;
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+#form-container #submit:hover {
+  cursor: pointer;
+  color: #ddd;
+}
+/* Footer - credits */
+footer {
+  background-color: darkgray;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  border-top: 1px dashed black;
+}
+footer a {
+  display: block;
+  color: #222;
+}
+
+/*** RESPONSIVE DESIGN ***/
+
+/** Tablet **/
+@media only screen and (min-width: 768px) {
+  /* Show inline Telephone and Email info */
+  #contact-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Change navigation to inline - still have button*/
+  nav ul {
+    padding: 12px 0;
+  }
+  nav ul li {
+    width: 50px;
+    font-size: 20px;
+    display: inline;
+    padding-left: 30px;
+  }
+  /* Change height of video */
+  #video {
+    height: 250px;
+  }
+  /* Diferent style for About section */
+  #about {
+    padding-top: 20px;
+  }
+  #about-container {
+    display: flex;
+    padding-top: 20px;
+  }
+  #about-container div {
+    width: 290px;
+    padding: 5px;
+  }
+  #about-container img {
+     width: 250px; 
+     height: 250px;
+  }
+  /* Diferent style for contact form */
+  #form-container {
+    width: 100%;
+  }
+  form {
+    width: 300px;
+    margin: auto;
+  }
+  form h2 {
+    text-align: center;
+  }
+  form input,textarea {
+    width: 300px;
+  }
+}
+
+/** Laptop **/
+
+@media only screen and (min-width: 1024px) {
+  /* Button to top of the page is upper */
+  #top {
+    bottom: 30px;
+  }
+  #top:hover {
+      background-color: blue;
+  }
+  /* Remove navigation button(hamburger menu) and show navigation inline */
+  #navMenu {
+    display: none;
+  }
+  nav {
+    position: static;
+    width: 1000px;
+    background-color: #fff;
+  }
+  #nav-ul {
+    display: flex;
+    color: red;
+    height: 35px;
+  }
+  #nav-ul li a {
+    color: #38B0DE;
+  }
+  #nav-ul li a:hover {
+    cursor: pointer;
+    font-size: 23px;
+  }
+  /* Difrent height for video */
+  #video {
+    height: 300px;
+  }
+  /* Style for about section */
+  #about h1 {
+    padding-bottom: 10px;
+  }
+   #about-container div {
+    width: 33.3%;
+    padding: 5px;
+  }
+  #about-container img {
+    width: 300px;
+    height: 300px;
+  }
+  #about-container h2 {
+    padding-top: 30px;
+  }
+  /* Style for contact form */
+  #form-container input, textarea {
+    width: 610px;
+  }
+  #form {
+    transform: translatex(-50%);
+  }
+  #form-container h2 {
+    width: 590px;
+  }
+  /* Style for footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  footer a:hover {
+    color: #fff;
+  }
+}
+
+/* PC */
+
+@media only screen and (min-width: 1440px) {
+  #about-container img {
+    width: 400px;
+    height: 350px;
+  }
+}
+/** DARK MODE  ***/
+
+@media (prefers-color-scheme: dark) {
+  }
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Product Landing Page</title>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+  <header id="header">
+    <!-- Contact info and social -->
+    <div id="contact-info">
+      <div class="contact-info-container">
+        <i class="fal fa-phone-alt"></i>
+        <p>Call Us: +11 54321 67890</p>
+      </div>
+      <div class="contact-info-container">
+        <i class="far fa-envelope"></i>
+        <p>Email Us: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="36534e575b465a53765b575f5a1855595b">[email&#160;protected]</a></p>
+      </div>
+      <div id="social">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-pinterest-square"></i>
+      </div>
+    </div>
+    <div id="logoAndNav">
+      <div id="logo">
+        <a href="#header"><img id="header-img" src="https://i.ibb.co/MnpjbQb/output-onlinepngtools.png"   alt="Best-Watches-Logo"/></a>       
+      </div>
+      <!-- Navigation -->
+      <div>
+        <i id="navMenu" class="fas fa-bars" onclick="showNav()"></i>
+      </div>
+      <nav id="nav-bar">
+        <ul id="nav-ul">
+          <!-- add section in nav link -->
+          <li><a class="nav-link" href="#header" onclick="showNav()"/>Home</a></li>
+          <li><a class="nav-link" href="#video" onclick="showNav()"/>Video</a></li>
+          <li><a class="nav-link" href="#about" onclick="showNav()"/>About</a></li>
+          <li><a class="nav-link" href="#form" onclick="showNav()"/>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<hr/>
+<div id="container>"
+<main>
+  <!-- Video -->
+  <h2>Check our watch in action</h2>
+ <iframe id="video"src="https://www.youtube.com/embed/PkZNo7MFNFg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- About -->
+  <section id="about">
+    <h1>Our Watch Has Lots Of Features</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic explicabo voluptas nisi iste reiciendis, tempore commodi necessitatibus, laborum laudantium.</p>
+    <div id="about-container">
+      <div>
+        <h2><i class="fas fa-bell"></i>Notification Alart</h2>
+        <p>Hic explicabo voluptas nisi iste reiciendis, tempore commodi necessitatibus, laborum laudantium.</p>
+      </div>
+      <div>
+        <img src="https://i.ibb.co/qnnvBcw/watch.jpg" alt="watch">
+      </div>
+      <div>
+        <h2><i class="fas fa-comments"></i>User Live Chat</h2>
+        <p>Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Contact form -->
+  <div id="form-container">
+    <form action="https://www.freecodecamp.com/email-submit" id="form">
+      <h2> Contact us </h2>
+      <input name="email" type="email" id="email" placeholder="john@gmail.com" required/><br/>
+      <textarea rows="4" name="comment" form="form">
+  Enter text here...</textarea><br/>
+      <input type="submit" id="submit" value="Contact Us"/>
+    </form>
+  </div>
+  <button id="top"><a href="#header">Page Top</a></button>
+  
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>Coded by: Sanja Panic</p>
+    <p>Credits to: </p>
+    <a href="https://imgbb.com/" target="_blank">Image uploader</a>
+    <a href="https://www.freelogodesign.org/" target="_blank">Logo designer</a>
+    <a href="https://www.freecodecamp.org/" target="_blank">Free code camp</a>
+  </footer>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  
+      <script id="rendered-js" >
+/* On click change fa-bars to fa-times */
+
+function showNav() {
+  var navMenu = document.getElementById("navMenu");
+  navMenu.classList.toggle("fa-times");
+
+  var nav = document.getElementById("nav-ul");
+
+  nav.classList.toggle("show");
+
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
